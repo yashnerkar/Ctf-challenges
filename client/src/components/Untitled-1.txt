@@ -1,0 +1,25 @@
+ // const key = CryptoJS.enc.Hex.parse(process.env.secret_key);
+  //   // const iv = CryptoJS.enc.Hex.parse(process.env.secret_iv);
+  //   // const mode = CryptoJS.mode.process.env.secret_mode;
+  //   // const padding = CryptoJS.pad.secret_padding;
+  //   // const encrypted = CryptoJS.process.env.encrypt.encrypt(answerTrim, key, {
+  //   //   iv: iv,
+  //   //   mode: mode,
+  //   //   padding: padding,
+  //   // }).toString();
+  //   // console.log(encrypted)
+
+
+
+
+   // const array = [
+  //   //   "ZI2GWYKhZRXgXN5n5/D3/UeUze7Pr1MSc2xFRyBn8WA=",
+  //   //   "ZI2GWYKhZRXzYYB2/PXm5gx+HZbrKZbLxbRiXLPP1msqDEtCSXkCpirRVV1NsEgV",
+  //   //   "ZI2GWYKhZRXkZodi0f3hzBv25MFqHWkYPpWDG3y2rq7IWS/tnuC4jhxydvfc+oXB",
+  //   //   "ZI2GWYKhZRXTXqI8zcfb7rAB9+ZjhHC67ft+RGdkgv0=",
+  //   //   "ZI2GWYKhZRX1Vp594d3m9ikLLiOplmxMdyyPtI/cfws=",
+  //   //   "ZI2GWYKhZRXdQbxCy93cx3fOJX0JCVI5NzYSR0L1qb8=",
+  //   //   "ZI2GWYKhZRXca5o2/cv1/L7eO35e4LJTFwM3AdeyqfPqt6LFKl7KgS6MknbiPxrj",
+  //   //   "ZI2GWYKhZRXja59k6/rm+koReokB9jVaCv1QMFXsC1Y=",
+  //   //   "ZI2GWYKhZRXQTb1YytnR1vFtML1OjTQluYaij94xkf4="
+  //   // ];

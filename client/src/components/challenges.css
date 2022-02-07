@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Courier+Prime&display=swap");
+
+.ip {
+  max-width: 50vw;
+  background: transparent;
+  border: solid 1px white;
+  border-radius: 30px;
+  height: 8vh;
+}
+.ip:focus {
+  background: transparent;
+  color: whitesmoke;
+}
+.submit-button {
+  display: block;
+  font-family: "Courier prime", monospace;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+.card {
+  box-shadow: 3px 3px 0px rgba(243, 223, 223, 0.966);
+  margin: 10px;
+}
+.images {
+  max-width: 45vw;
+  max-height: 35vh;
+}
+@media screen and (max-width: 770px) {
+  .images {
+    max-width: 35vw;
+    max-height: 35vh;
+  }
+}

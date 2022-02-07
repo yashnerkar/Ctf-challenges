@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #1f1d48;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-m {
+  background-image: url("../images/home-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  margin: 40px 0;
+}
+
+.container-m .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  backdrop-filter: blur(12px) saturate(165%);
+  background-color: rgba(17, 25, 40, 0.64);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+.container-m .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+.container-m .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+.container-m .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+.container-m .card:nth-child(4) .box .content a {
+  background: #e9db13;
+}
+
+.container-m .card:nth-child(5) .box .content a {
+  background: #aa0eda;
+}
+
+.container-m .card:nth-child(6) .box .content a {
+  background: #df8b2c;
+}
+.container-m .card:nth-child(7) .box .content a {
+  background: #2196f3;
+}
+.container-m .card:nth-child(8) .box .content a {
+  background: #e91e63;
+}
+.container-m .card:nth-child(9) .box .content a {
+  background: #aa0eda;
+}
+.container-m .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container-m .card .box:hover {
+  transform: translateY(-20px);
+}
+
+.container-m .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.container-m .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.container-m .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.container-m .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+.container-m .card .box .content p {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family:"cairo",sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.container-m .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.container-m .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
