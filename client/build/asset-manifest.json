@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dd9acfef.chunk.css",
+    "main.js": "/static/js/main.801ac209.chunk.js",
+    "main.js.map": "/static/js/main.801ac209.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d9f59725.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d9f59725.js.map",
+    "static/js/2.a07d2c83.chunk.js": "/static/js/2.a07d2c83.chunk.js",
+    "static/js/2.a07d2c83.chunk.js.map": "/static/js/2.a07d2c83.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.dd9acfef.chunk.css.map": "/static/css/main.dd9acfef.chunk.css.map",
+    "static/js/2.a07d2c83.chunk.js.LICENSE.txt": "/static/js/2.a07d2c83.chunk.js.LICENSE.txt",
+    "static/media/CSI-CATT-DMCE.90b65808.webp": "/static/media/CSI-CATT-DMCE.90b65808.webp",
+    "static/media/cards.css": "/static/media/home-bg.fb09e6ab.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9f59725.js",
+    "static/js/2.a07d2c83.chunk.js",
+    "static/css/main.dd9acfef.chunk.css",
+    "static/js/main.801ac209.chunk.js"
+  ]
+}
