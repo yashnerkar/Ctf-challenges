@@ -1,6 +1,6 @@
+
 import React, { useState, useEffect } from "react";
 import CryptoJS from "crypto-js";
-// import bcrypt from "bcryptjs";
 import "./challenges.css";
 import "./cards.css";
 function Challenges({ get, showAlert }) {
@@ -37,44 +37,39 @@ function Challenges({ get, showAlert }) {
     text.style.fontSize = "30px";
     text.style.top = "10px";
     text.style.right = "20px";
-    id.setAttribute("disabled", true);
+    // id.setAttribute("disabled", true);
     return id.appendChild(text);
   });
   const onChange = (e) => {
     setAnswer(e.target.value);
   };
-
-  const array = [];
   const update = async (e) => {
     e.preventDefault();
     const answerTrim = answer.trim();
-     const key = CryptoJS.enc.Hex.parse(process.env.secret_key);
-     const iv = CryptoJS.enc.Hex.parse(process.env.secret_iv);
-     const mode = CryptoJS.mode.process.env.secret_mode;
-    const padding = CryptoJS.pad.secret_padding;
-     const encrypted = CryptoJS.process.env.encrypt.encrypt(answerTrim, key, {
-       iv: iv,
-       mode: mode,
+    const key = CryptoJS.enc.Hex.parse("000102030405060708090a0b0c0d0e0f");
+    const iv = CryptoJS.enc.Hex.parse("101112131415161718191a1b1c1d1e1f");
+    const mode = CryptoJS.mode.CFB;
+    const padding = CryptoJS.pad.AnsiX923;
+    const encrypted = CryptoJS.AES.encrypt(answerTrim, key, {
+      iv: iv,
+      mode: mode,
       padding: padding,
-     }).toString();
-     console.log(encrypted);
-
+    }).toString();
     const array = [
-        "ZI2GWYKhZRXgXN5n5/D3/UeUze7Pr1MSc2xFRyBn8WA=",
-       "ZI2GWYKhZRXzYYB2/PXm5gx+HZbrKZbLxbRiXLPP1msqDEtCSXkCpirRVV1NsEgV",
+      "ZI2GWYKhZRXgXN5n5/D3/UeUze7Pr1MSc2xFRyBn8WA=",
+      "ZI2GWYKhZRXzYYB2/PXm5gx+HZbrKZbLxbRiXLPP1msqDEtCSXkCpirRVV1NsEgV",
       "ZI2GWYKhZRXkZodi0f3hzBv25MFqHWkYPpWDG3y2rq7IWS/tnuC4jhxydvfc+oXB",
-         "ZI2GWYKhZRXTXqI8zcfb7rAB9+ZjhHC67ft+RGdkgv0=",
-         "ZI2GWYKhZRX1Vp594d3m9ikLLiOplmxMdyyPtI/cfws=",
-         "ZI2GWYKhZRXdQbxCy93cx3fOJX0JCVI5NzYSR0L1qb8=",
-         "ZI2GWYKhZRXca5o2/cv1/L7eO35e4LJTFwM3AdeyqfPqt6LFKl7KgS6MknbiPxrj",
-         "ZI2GWYKhZRXja59k6/rm+koReokB9jVaCv1QMFXsC1Y=",
-      "ZI2GWYKhZRXQTb1YytnR1vFtML1OjTQluYaij94xkf4="
-      ];
-
-      const filter = array.filter((e) => {
-        return e === encrypted;
-      });
-
+      "ZI2GWYKhZRXTXqI8zcfb7rAB9+ZjhHC67ft+RGdkgv0=",
+      "ZI2GWYKhZRX1Vp594d3m9ikLLiOplmxMdyyPtI/cfws=",
+      "ZI2GWYKhZRXdQbxCy93cx3fOJX0JCVI5NzYSR0L1qb8=",
+      "ZI2GWYKhZRXca5o2/cv1/L7eO35e4LJTFwM3AdeyqfPqt6LFKl7KgS6MknbiPxrj",
+      "ZI2GWYKhZRXja59k6/rm+koReokB9jVaCv1QMFXsC1Y=",
+      "ZI2GWYKhZRXQTb1YytnR1vFtML1OjTQluYaij94xkf4=",
+    ];
+    const filter = array.filter((e) => {
+      console.log(e);
+      return e === encrypted;
+    });
     document.getElementById("submitBtn").disabled = true;
     setTimeout(() => {
       document.getElementById("submitBtn").disabled = false;
@@ -118,7 +113,7 @@ function Challenges({ get, showAlert }) {
       </button>
       <form
         className="row g-3 d-flex flex-column align-items-center mt-3 mb-5"
-        // onSubmit={update}
+        onSubmit={update}
       >
         <input
           type="text"
@@ -325,3 +320,4 @@ function Challenges({ get, showAlert }) {
 }
 
 export default Challenges;
+

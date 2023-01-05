@@ -6,7 +6,7 @@ const moment = require("moment");
 const bcrypt = require("bcrypt");
 const { route } = require("express/lib/router");
 
-router.post("/login", async(req, res) => {
+router.post("/login", async (req, res) => {
     const { group, password } = req.body;
     try {
         const data = await User.find({ group: group });
@@ -33,9 +33,8 @@ router.post("/login", async(req, res) => {
         return res.send(error);
     }
 });
-router.post("/submit", async(req, res) => {
+router.post("/submit", async (req, res) => {
     const { id, answer, target } = req.body;
-    console.log(req.body);
     try {
         const currentTime = moment().format("h:mm:ss a");
         const answerArray = [
@@ -49,11 +48,9 @@ router.post("/submit", async(req, res) => {
             "csi-ctf{sequential_flag}",
             "csi-ctf{@CSIDMCECTF#}"
         ];
-        const check = await answerArray.filter((ele) => {
+        const check = answerArray.filter((ele) => {
             return ele === answer;
-
         });
-        console.log(check);
         if (!check.length) {
             return res.json("#E52D50:white:Incorrect");
         }
@@ -64,18 +61,20 @@ router.post("/submit", async(req, res) => {
         if (array.length) {
             return res.json("greenyellow:black:Your Answer has already been Stored");
         }
-        await Data.updateOne({ id: id }, {
-            $push: {
-                solution: { answer: answer, target: target, time: currentTime },
-            },
-        });
+        await Data.updateOne(
+            { id: id },
+            {
+                $push: {
+                    solution: { answer: answer, target: target, time: currentTime },
+                },
+            }
+        );
         res.json("greenyellow:black:Correct");
-
     } catch (error) {
         res.send(error);
     }
 });
-router.post("/site-target", async(req, res) => {
+router.post("/site-target", async (req, res) => {
     const { id } = req.body;
     try {
         const findTarget = await Data.find({ id: id });
